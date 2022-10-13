@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VehiculeService } from 'src/app/services/vehicule.service';
 
 @Component({
   selector: 'app-formulaire-vehicule',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireVehiculeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vehiculeService : VehiculeService) { }
 
   addVehicule(){
     

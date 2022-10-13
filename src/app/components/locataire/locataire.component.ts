@@ -14,6 +14,10 @@ export class LocataireComponent implements OnInit {
   constructor(private locataireService : LocataireService,
     private router : Router) { }
 
+    /**
+     * La fonction onDetail() est appelée lorsque l'utilisateur clique sur le bouton "Détails". Il
+     * accède au composant locataire-detail
+     */
     onDetail(){
       this.router.navigateByUrl(`locataires/${this.locataire.id}`)
     }

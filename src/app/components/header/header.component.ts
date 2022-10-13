@@ -13,16 +13,28 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  OnAccueil(){
+  /**
+   * Il navigue vers la page d'accueil
+   */
+  onAccueil(){
     this.router.navigateByUrl("");
   }
-  OnLocataires(){
+  /**
+   * Il navigue vers la page des locataires.
+   */
+  onLocataires(){
     this.router.navigateByUrl("locataires");
   }
-  OnVehicules(){
+  /**
+   * Il navigue vers la page des véhicules.
+   */
+  onVehicules(){
     this.router.navigateByUrl("vehicules");
   }
-  OnLocations(){
+/**
+ * Il accède à la page des locations.
+ */
+  onLocations(){
     this.router.navigateByUrl("locations");
   }
 

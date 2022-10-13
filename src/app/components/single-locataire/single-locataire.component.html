@@ -4,6 +4,6 @@
     <p>{{locataire.dateNaissance}}</p>
     <p>{{locataire.mail}}</p>
     <p>{{locataire.tel}}</p>
-    <button (click)="onModifier()">Modifier</button>
-    <button class="suppr" (click)="onSupprimer()">Supprimer</button>
+    <button (click)="onModifier(locataire.id)">Modifier</button>
+    <button class="suppr" (click)="onSupprimer(locataire.id)">Supprimer</button>
 </div>

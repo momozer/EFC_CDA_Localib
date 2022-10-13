@@ -5,9 +5,10 @@ import { Vehicule } from '../model/vehicule.model';
   providedIn: 'root'
 })
 export class VehiculeService {
+  constructor() { }
   vehicules: Vehicule[] = [
     {
-      etat : "bon",
+      etat : "A",
       immatriculation : "AF541DE",
       marque : "Citroen",
       modele : "C4",
@@ -16,7 +17,7 @@ export class VehiculeService {
       type : "voiture"
     },
     {
-      etat : "moyen",
+      etat : "B",
       immatriculation : "AF200ll",
       marque : "Yamaha",
       modele : "125",
@@ -25,7 +26,7 @@ export class VehiculeService {
       type : "moto"
     },
     {
-      etat : "mauvais",
+      etat : "C",
       immatriculation : "AF541DE",
       marque : "Peugeot",
       modele : "205",
@@ -34,7 +35,7 @@ export class VehiculeService {
       type : "voiture"
     },
     {
-      etat : "bon",
+      etat : "A",
       immatriculation : "AF541DE",
       marque : "Citroen",
       modele : "Trafic",
@@ -43,7 +44,7 @@ export class VehiculeService {
       type : "camion"
     },
     {
-      etat : "bon",
+      etat : "A",
       immatriculation : "AF541DE",
       marque : "Citroen",
       modele : "C4",
@@ -52,7 +53,7 @@ export class VehiculeService {
       type : "utilitaire"
     },
     {
-      etat : "bon",
+      etat : "A",
       immatriculation : "AF541DE",
       marque : "Citroen",
       modele : "C4",
@@ -62,9 +63,18 @@ export class VehiculeService {
     }
   ];
 
+ /**
+  * Il renvoie un tableau d'objets Vehicule
+  * @returns Un tableau d'objets Véhicule.
+  */
   getAllVehicules() : Vehicule[]{
     return this.vehicules;
   }
+/**
+ * Il renvoie un objet vehicule du tableau vehicules, si le vehicule existe, sinon il lance une erreur
+ * @param {string} vehiculeImmatriculation - chaîne de caractères
+ * @returns le véhicule avec l'immatriculation donnée.
+ */
   getVehiculeByImmatriculation(vehiculeImmatriculation: string): Vehicule {
     const vehicule = this.vehicules.find(vehicule => vehicule.immatriculation === vehiculeImmatriculation);
     if(!vehicule){
@@ -74,5 +84,17 @@ export class VehiculeService {
     }
   }
 
-  constructor() { }
+ /**
+  * La fonction prend un véhicule en paramètre et l'ajoute au tableau des véhicules
+  * @param {Vehicule} vehicule - Véhicule - c'est le paramètre que nous passons dans la fonction. C'est
+  * un objet Véhicule.
+  */
+  addVehicule(vehicule:Vehicule){
+    this.vehicules.push(vehicule);
+  }
+
+  // supprimer(immatriculation:string): void{
+  //   this.vehicules.splice(this.vehicule[immatriculation], 1);
+  // }
+
 }

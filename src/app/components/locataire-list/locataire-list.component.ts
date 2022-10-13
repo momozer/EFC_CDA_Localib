@@ -12,10 +12,10 @@ export class LocataireListComponent implements OnInit {
   
   locataires !: Locataire[];
   
-  constructor(private locataireService : LocataireService) { }
+  constructor(private service : LocataireService) { }
 
   ngOnInit(): void {
-    this.locataires = this.locataireService.getAllLocataires();
+    this.locataires = this.service.getAllLocataires();
   }
 
  

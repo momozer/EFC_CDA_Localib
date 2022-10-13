@@ -15,12 +15,26 @@ export class SingleLocataireComponent implements OnInit {
   constructor(private locataireService : LocataireService,
     private route : ActivatedRoute) { }
 
+ /*  */
+/**
+ * Nous obtenons le locataireId à partir des paramètres de route, puis nous utilisons le
+ * locataireService pour obtenir le locataire avec cet identifiant
+ */
   ngOnInit(): void {
     const locataireId = +this.route.snapshot.params['id'];    
     this.locataire = this.locataireService.getLocataireById(locataireId);
   }
 
-  onSupprimer(){}
-  onModifier(){}
+/**
+ * Il prend un id en paramètre, puis appelle la fonction delete du service locataireService, en passant
+ * l'id en paramètre
+ * @param {number} id - l'identifiant du locataire à supprimer
+ */
+  onSupprimer(id : number){
+    this.locataireService.supprimer(id);
+  }
+  onModifier(id : number){
+
+  }
 
 }

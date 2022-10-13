@@ -12,6 +12,9 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ /**
+  * Il navigue vers la page des locataires.
+  */
   onLocataires(){
     this.router.navigateByUrl("locataires");
   }

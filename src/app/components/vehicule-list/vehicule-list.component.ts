@@ -13,6 +13,11 @@ export class VehiculeListComponent implements OnInit {
 
   constructor(private vehiculeService : VehiculeService) { }
 
+ /**
+  * La fonction ngOnInit() est un hook de cycle de vie. Angular appelle ngOnInit() peu de temps après
+  * la création d'un composant. C'est un bon endroit pour mettre la logique d'initialisation
+  * il va chercher tous les vehicules pour faciliter l'affichage
+  */
   ngOnInit(): void {
     this.vehicules = this.vehiculeService.getAllVehicules();
   }

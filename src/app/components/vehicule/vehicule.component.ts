@@ -13,6 +13,9 @@ export class VehiculeComponent implements OnInit {
 
   constructor(private vehiculeService : VehiculeService,
     private router : Router) { }
+/**
+ * Il navigue vers la page de détail du véhicule actuel
+ */
 
     onDetail(){
       this.router.navigateByUrl(`vehicules/${this.vehicule.immatriculation}`);

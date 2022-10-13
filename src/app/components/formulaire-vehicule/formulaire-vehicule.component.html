@@ -1,4 +1,4 @@
-  <form (ngSubmit)="addVehicule()"> 
+<div>  <form> 
     <label>Immatriculation :
         <input type="text" formControlName="immatriculation">
     </label>   
@@ -41,8 +41,8 @@
     </label>  
     <label>
 
-        <button>Ajouter</button>
+        <button (click)="addVehicule()">Ajouter</button>
     </label>
     
 </form>
-  
+  </div>

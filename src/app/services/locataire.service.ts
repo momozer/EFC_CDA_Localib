@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+  import { Injectable } from '@angular/core';
 import { Locataire } from '../model/locataire.model';
 
 @Injectable({
@@ -60,6 +60,11 @@ export class LocataireService {
     return this.locataires;
   }
 
+ /**
+  * Il renvoie un objet locataire du tableau locataires, étant donné un identifiant locataire
+  * @param {number} locataireId - Numéro
+  * @returns Le locataire avec l'identifiant passé en paramètre.
+  */
   getLocataireById(locataireId: number): Locataire {
     const locataire = this.locataires.find(locataire => locataire.id === locataireId);
     if(!locataire){
@@ -67,6 +72,22 @@ export class LocataireService {
     }else{
       return locataire;
     }
+  }
+
+  /**
+   * Il prend un objet locataire comme argument et l'ajoute au tableau locataires
+   * @param {Locataire} locataire - Locataire est le paramètre que nous passons dans la fonction.
+   */
+  addLocataire(locataire: Locataire){
+    this.locataires.push(locataire);
+  }
+
+ /**
+  * Il supprime l'élément à l'index du tableau qui correspond à l'id du locataire
+  * @param {number} id - Numéro
+  */
+  supprimer(id : number){
+    this.locataires.splice(id,1);
   }
   constructor() { }
 }

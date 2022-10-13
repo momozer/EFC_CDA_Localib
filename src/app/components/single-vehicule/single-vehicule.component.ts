@@ -15,14 +15,25 @@ export class SingleVehiculeComponent implements OnInit {
   constructor(private vehiculeService : VehiculeService,
     private route : ActivatedRoute) { }
 
+/**
+ * Il obtient le numéro d'immatriculation du véhicule à partir de l'URL, puis l'utilise pour obtenir le
+ * véhicule du service
+ */
   ngOnInit(): void {
     const vehiculeImmatriculation = this.route.snapshot.params['immatriculation'];
     this.vehicule = this.vehiculeService.getVehiculeByImmatriculation(vehiculeImmatriculation);
   }
 
+ /**
+  * Cela modifie un element en prenant son id qui est son immatriculation et permet la modification.
+  */
   onModifier(){}
 
-  onSupprimer(){}
+  /**
+   * Il prend une chaîne en paramètre et ne renvoie rien
+   * @param {string} immatriculation - chaîne de caractères
+   */
+  onSupprimer(immatriculation: string){}
 
 
 }

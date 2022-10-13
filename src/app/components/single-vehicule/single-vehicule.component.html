@@ -7,5 +7,5 @@
     <p>{{vehicule.etat}}</p>
     <p>{{vehicule.immatriculation}}</p>
     <button (click)="onModifier()">Modifier</button>
-    <button class="suppr" (click)="onSupprimer()">Supprimer</button>
+    <button class="suppr" (click)="onSupprimer(vehicule.immatriculation)">Supprimer</button>
 </div>

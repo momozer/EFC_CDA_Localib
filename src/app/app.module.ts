@@ -13,6 +13,7 @@ import { VehiculeComponent } from './components/vehicule/vehicule.component';
 import { VehiculeListComponent } from './components/vehicule-list/vehicule-list.component';
 import { FormulaireVehiculeComponent } from './components/formulaire-vehicule/formulaire-vehicule.component';
 import { SingleVehiculeComponent } from './components/single-vehicule/single-vehicule.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { SingleVehiculeComponent } from './components/single-vehicule/single-veh
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
