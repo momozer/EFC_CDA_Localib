@@ -1,0 +1,11 @@
+<div class="vehicule-card">
+    <button routerLink="/vehicules">Retour</button>
+    <h3>{{vehicule.marque}} {{vehicule.modele}}</h3>
+    <p>{{vehicule.type}}</p>
+    <p>{{vehicule.status}}</p>
+    <p>{{vehicule.prix}}</p>
+    <p>{{vehicule.etat}}</p>
+    <p>{{vehicule.immatriculation}}</p>
+    <button (click)="onModifier()">Modifier</button>
+    <button class="suppr" (click)="onSupprimer()">Supprimer</button>
+</div>

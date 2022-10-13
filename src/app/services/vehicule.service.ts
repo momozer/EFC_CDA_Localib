@@ -7,7 +7,6 @@ import { Vehicule } from '../model/vehicule.model';
 export class VehiculeService {
   vehicules: Vehicule[] = [
     {
-      id : 1,
       etat : "bon",
       immatriculation : "AF541DE",
       marque : "Citroen",
@@ -17,9 +16,8 @@ export class VehiculeService {
       type : "voiture"
     },
     {
-      id : 2,
       etat : "moyen",
-      immatriculation : "AF541DE",
+      immatriculation : "AF200ll",
       marque : "Yamaha",
       modele : "125",
       prix : 80,
@@ -27,7 +25,6 @@ export class VehiculeService {
       type : "moto"
     },
     {
-      id : 3,
       etat : "mauvais",
       immatriculation : "AF541DE",
       marque : "Peugeot",
@@ -37,7 +34,6 @@ export class VehiculeService {
       type : "voiture"
     },
     {
-      id : 4,
       etat : "bon",
       immatriculation : "AF541DE",
       marque : "Citroen",
@@ -47,7 +43,6 @@ export class VehiculeService {
       type : "camion"
     },
     {
-      id : 5,
       etat : "bon",
       immatriculation : "AF541DE",
       marque : "Citroen",
@@ -57,7 +52,6 @@ export class VehiculeService {
       type : "utilitaire"
     },
     {
-      id : 1,
       etat : "bon",
       immatriculation : "AF541DE",
       marque : "Citroen",
@@ -71,8 +65,8 @@ export class VehiculeService {
   getAllVehicules() : Vehicule[]{
     return this.vehicules;
   }
-  getVehiculeById(vehiculeId: number): Vehicule {
-    const vehicule = this.vehicules.find(vehicule => vehicule.id === vehiculeId);
+  getVehiculeByImmatriculation(vehiculeImmatriculation: string): Vehicule {
+    const vehicule = this.vehicules.find(vehicule => vehicule.immatriculation === vehiculeImmatriculation);
     if(!vehicule){
       throw new Error("Vehicule non existant");
     }else{

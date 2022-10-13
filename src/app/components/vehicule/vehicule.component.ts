@@ -15,7 +15,7 @@ export class VehiculeComponent implements OnInit {
     private router : Router) { }
 
     onDetail(){
-      this.router.navigateByUrl(`vehicules/${this.vehicule.id}`);
+      this.router.navigateByUrl(`vehicules/${this.vehicule.immatriculation}`);
     }
 
     onSupprimer(){}

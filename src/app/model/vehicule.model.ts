@@ -1,5 +1,4 @@
 export class Vehicule{
-    id !: number;
     etat !: string;
     immatriculation !: string;
     marque !: string;
