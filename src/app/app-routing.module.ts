@@ -2,11 +2,12 @@ import { LocataireListComponent } from './components/locataire-list/locataire-li
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SingleLocataireComponent } from './components/single-locataire/single-locataire.component';
+import { AccueilComponent } from './components/accueil/accueil.component';
 
 const routes: Routes = [
   {path:'locataires' , component: LocataireListComponent} ,
   {path:'locataires/:id' , component: SingleLocataireComponent} ,
-  // {path:'vehicules' , component: } 
+  {path:'accueil' , component: AccueilComponent} 
 ];
 
 @NgModule({

@@ -1,9 +1,9 @@
 <div class="locataire-card">
-    <button>Retour</button>
+    <button routerLink="/locataires">Retour</button>
     <h3>{{locataire.nom|uppercase}} {{locataire.prenom|titlecase}}</h3>
     <p>{{locataire.dateNaissance}}</p>
     <p>{{locataire.mail}}</p>
     <p>{{locataire.tel}}</p>
     <button (click)="onModifier()">Modifier</button>
-    <button (click)="onSupprimer()">Supprimer</button>
+    <button class="suppr" (click)="onSupprimer()">Supprimer</button>
 </div>

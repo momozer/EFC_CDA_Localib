@@ -14,13 +14,16 @@ export class HeaderComponent implements OnInit {
   }
 
   OnAccueil(){
-    this.router.navigateByUrl("");
+    this.router.navigateByUrl("accueil");
   }
   OnLocataires(){
     this.router.navigateByUrl("locataires");
   }
   OnVehicules(){
     this.router.navigateByUrl("vehicules");
+  }
+  OnLocations(){
+    this.router.navigateByUrl("locations");
   }
 
 }

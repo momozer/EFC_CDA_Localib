@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { LocataireComponent } from './components/locataire/locataire.component';
 import { LocataireListComponent } from './components/locataire-list/locataire-list.component';
 import { SingleLocataireComponent } from './components/single-locataire/single-locataire.component';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SingleLocataireComponent } from './components/single-locataire/single-l
     HeaderComponent,
     LocataireComponent,
     LocataireListComponent,
-    SingleLocataireComponent
+    SingleLocataireComponent,
+    AccueilComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
