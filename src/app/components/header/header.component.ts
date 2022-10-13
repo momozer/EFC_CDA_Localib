@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   }
 
   OnAccueil(){
-    this.router.navigateByUrl("accueil");
+    this.router.navigateByUrl("");
   }
   OnLocataires(){
     this.router.navigateByUrl("locataires");

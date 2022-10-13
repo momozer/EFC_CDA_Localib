@@ -1,0 +1,45 @@
+  <form (ngSubmit)="addVehicule()"> 
+    <label>Immatriculation :
+        <input type="text" formControlName="immatriculation">
+    </label>   
+    
+    <label>Marque :
+        <input type="text" formControlName="marque">
+    </label>  
+    
+    <label>Modèle :
+        <input type="text" formControlName="modele">
+    </label>  
+    
+    <label>Etat :
+        <select formControlName="etat">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>
+    </label>  
+    
+    <label>Prix à la journée :
+        <input type="number" formControlName="prix">
+    </label>  
+    
+    <label>Disponibilité :
+        <select formControlName="status">
+            <option value="0">Disponible</option>
+            <option value="1">Indisponible</option>
+        </select>
+    </label>  
+
+    <label>Type :
+        <select formControlName="type">
+            <option value="Voiture">Voiture</option>
+            <option value="Camion">Camion</option>
+            <option value="Utilitaire">Utilitaire</option>
+            <option value="Moto">Moto</option>
+        </select>
+    </label>  
+    
+    <button>Ajouter</button>
+</form>
+  

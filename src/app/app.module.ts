@@ -8,7 +8,12 @@ import { LocataireComponent } from './components/locataire/locataire.component';
 import { LocataireListComponent } from './components/locataire-list/locataire-list.component';
 import { SingleLocataireComponent } from './components/single-locataire/single-locataire.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
-import { FormulaireComponent } from './formulaire/formulaire.component';
+import { FormulaireLocataireComponent } from './components/formulaire-locataire/formulaire-locataire.component';
+import { VehiculeComponent } from './components/vehicule/vehicule.component';
+import { VehiculeListComponent } from './components/vehicule-list/vehicule-list.component';
+import { FormulaireVehiculeComponent } from './components/formulaire-vehicule/formulaire-vehicule.component';
+import { SingleVehiculeComponent } from './components/single-vehicule/single-vehicule.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
     LocataireListComponent,
     SingleLocataireComponent,
     AccueilComponent,
-    FormulaireComponent
+    FormulaireLocataireComponent,
+    VehiculeComponent,
+    VehiculeListComponent,
+    FormulaireVehiculeComponent,
+    SingleVehiculeComponent,
+  
   ],
   imports: [
     BrowserModule,
