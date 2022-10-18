@@ -7,60 +7,11 @@ import { Vehicule } from '../model/vehicule.model';
 export class VehiculeService {
   constructor() { }
   vehicules: Vehicule[] = [
-    {
-      etat : "A",
-      immatriculation : "AF541DE",
-      marque : "Citroen",
-      modele : "C4",
-      prix : 40,
-      status : "disponible",
-      type : "voiture"
-    },
-    {
-      etat : "B",
-      immatriculation : "AF200ll",
-      marque : "Yamaha",
-      modele : "125",
-      prix : 80,
-      status : "non disponible",
-      type : "moto"
-    },
-    {
-      etat : "C",
-      immatriculation : "AF541DE",
-      marque : "Peugeot",
-      modele : "205",
-      prix : 25,
-      status : "disponible",
-      type : "voiture"
-    },
-    {
-      etat : "A",
-      immatriculation : "AF541DE",
-      marque : "Citroen",
-      modele : "Trafic",
-      prix : 50,
-      status : "disponible",
-      type : "camion"
-    },
-    {
-      etat : "A",
-      immatriculation : "AF541DE",
-      marque : "Citroen",
-      modele : "C4",
-      prix : 40,
-      status : "disponible",
-      type : "utilitaire"
-    },
-    {
-      etat : "A",
-      immatriculation : "AF541DE",
-      marque : "Citroen",
-      modele : "C4",
-      prix : 40,
-      status : "disponible",
-      type : "voiture"
-    }
+
+    new Vehicule ("A", "AF541DE","Citroen", "C4",40, "disponible","voiture"),
+    new Vehicule ( "B", "AF200ll", "Yamaha", "125", 80, "non disponible", "moto"),
+    new Vehicule ("C", "AF541DE","Peugeot", "205",25, "disponible","voiture"),
+    
   ];
 
  /**

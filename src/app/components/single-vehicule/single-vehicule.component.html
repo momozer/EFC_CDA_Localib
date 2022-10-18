@@ -1,9 +1,9 @@
 <div class="vehicule-card">
     <button routerLink="/vehicules">Retour</button>
     <h3>{{vehicule.marque}} {{vehicule.modele}}</h3>
-    <p>{{vehicule.type}}</p>
-    <p>{{vehicule.status}}</p>
-    <p>{{vehicule.prix}}</p>
+    <p>Type de véhicule : {{vehicule.type}}</p>
+    <p>Statut : {{vehicule.status}}</p>
+    <p>Prix/jour : {{vehicule.prix | currency : 'EUR'}}</p>
     <p>{{vehicule.etat}}</p>
     <p>{{vehicule.immatriculation}}</p>
     <button class="louer">Louer</button>
