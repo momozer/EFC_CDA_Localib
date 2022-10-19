@@ -25,4 +25,37 @@ export class Locataire {
         this.mail = mail;
         this.tel = tel
     }
+
+    //Getter et Setter:
+    getId() {
+        return this.id;
+      }
+    
+      setId(id:number){
+        this.id = id;
+      }
+    
+      getprenom() {
+        return this.prenom;
+      }
+    
+      setPrenom(prenom: string){
+        this.prenom = prenom;
+      }
+    
+      getNom() {
+        return this.nom;
+      }
+    
+      setNom(nom: string){
+        this.nom = nom;
+      }
+    
+      getMail() {
+        return this.mail;
+      }
+    
+      setMail(mail: string){
+        this.mail = mail;
+      }
 }

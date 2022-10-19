@@ -1,10 +1,10 @@
-import { LocataireListComponent } from './components/locataire-list/locataire-list.component';
+import { LocataireListComponent } from './pages/locatairePage/locataire-list/locataire-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SingleLocataireComponent } from './components/single-locataire/single-locataire.component';
-import { AccueilComponent } from './components/accueil/accueil.component';
-import { VehiculeListComponent } from './components/vehicule-list/vehicule-list.component';
-import { SingleVehiculeComponent } from './components/single-vehicule/single-vehicule.component';
+import { SingleLocataireComponent } from './pages/locatairePage/single-locataire/single-locataire.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
+import { VehiculeListComponent } from './pages/vehiculePage/vehicule-list/vehicule-list.component';
+import { SingleVehiculeComponent } from './pages/vehiculePage/single-vehicule/single-vehicule.component';
 
 /* Définition des routes de l'application. */
 const routes: Routes = [

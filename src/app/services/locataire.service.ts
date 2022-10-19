@@ -5,6 +5,11 @@ import { Locataire } from '../model/locataire.model';
   providedIn: 'root'
 })
 export class LocataireService {
+  locatairemodif !: Locataire;
+
+  /**
+   * tableau de locataire.
+   */
   locataires : Locataire[] = [
     
       new Locataire ( 1, "Mohamed", "Le che", "15/08/1996", "mohamed@mail.com", "0608050906"),
@@ -48,8 +53,15 @@ export class LocataireService {
   * Il supprime l'élément à l'index du tableau qui correspond à l'id du locataire
   * @param {number} locataireId - Numéro
   */
-  supprimer(locataireId : number){
+  supprimer(locataireId : number): void{
     this.locataires.splice(locataireId -1 ,1);
+  }
+
+  modifier(locataireModifier: Locataire, locataireId: number){
+    this.locatairemodif = (this.getLocataireById(locataireId));
+    this.locatairemodif.setPrenom(locataireModifier.prenom);
+    this.locatairemodif.setNom((locataireModifier.nom));
+    this.locatairemodif.setMail(locataireModifier.mail)
   }
 
 

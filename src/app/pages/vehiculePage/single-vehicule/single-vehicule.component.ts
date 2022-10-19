@@ -20,8 +20,8 @@ export class SingleVehiculeComponent implements OnInit {
  * véhicule du service
  */
   ngOnInit(): void {
-    const vehiculeImmatriculation = this.route.snapshot.params['immatriculation'];
-    this.vehicule = this.vehiculeService.getVehiculeByImmatriculation(vehiculeImmatriculation);
+    const vehiculeId = this.route.snapshot.params['id'];
+    this.vehicule = this.vehiculeService.getVehiculeById(vehiculeId);
   }
 
  /**
@@ -31,9 +31,9 @@ export class SingleVehiculeComponent implements OnInit {
 
   /**
    * Il prend une chaîne en paramètre et ne renvoie rien
-   * @param {string} immatriculation - chaîne de caractères
+   * @param {numberg} id - nombre
    */
-  onSupprimer(immatriculation: string){}
+  onSupprimer(id: number){}
 
 
 }
