@@ -22,7 +22,13 @@ export class LocataireComponent implements OnInit {
       this.router.navigateByUrl(`locataires/${this.locataire.id}`)
     }
 
-    onSupprimer(){}
+    onSupprimer(){
+      this.locataireService.supprimer(this.locataire.id)
+    }
+
+    onModifier(){
+      this.locataireService.modifier(this.locataire,this.locataire.id)
+    }
 
   ngOnInit(): void {
   }

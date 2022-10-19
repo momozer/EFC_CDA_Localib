@@ -1,16 +1,29 @@
-<div>
-  <form>
-    <label for="nom">Nom : </label>
-    <input type="text" />
-    <label for="prenom">Prenom : </label>
-    <input type="text" />
-    <label for="dateNaissance">Date de Naissance : </label>
-    <input type="text" />
-    <label for="mail">Email : </label>
-    <input type="text" />
-    <label for="tel">Tel : </label>
-    <input type="text" />
-
-    <button type="submit" (click)="addLocataire()">Ajouter</button>
-  </form>
+<div class="formContainer">
+  <div class="form">
+    <h4>{{titreFormulaire}}</h4>
+    <form (ngSubmit)="submit()" [formGroup]="formLocataire">
+      <div>
+        <label>Nom</label>
+        <input formControlName="prenom" type="text">
+      </div>
+      <div>
+        <label>Prénom</label>
+        <input formControlName="nom" type="text">
+      </div>
+      <div>
+        <label>Mail</label>
+        <input formControlName="mail" type="mail">
+      </div>
+      <div>
+        <label>Tel</label>
+        <input formControlName="tel" type="tel">
+      </div>
+      <div class="buttonContainer">
+        <button class="deleteButton" (click)="annuler()">Annuler</button>
+        <button>Valider</button>
+      </div>
+    </form>
+  </div>
 </div>
+
+
