@@ -1,3 +1,4 @@
+import { LocataireListComponent } from './../locataire-list/locataire-list.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Locataire } from 'src/app/model/locataire.model';
@@ -12,7 +13,7 @@ export class LocataireComponent implements OnInit {
   @Input() locataire !: Locataire
 
   constructor(private locataireService : LocataireService,
-    private router : Router) { }
+    private router : Router, private listLocataire : LocataireListComponent) { }
 
     /**
      * La fonction onDetail() est appelée lorsque l'utilisateur clique sur le bouton "Détails". Il
@@ -27,7 +28,7 @@ export class LocataireComponent implements OnInit {
     }
 
     onModifier(){
-      this.locataireService.modifier(this.locataire,this.locataire.id)
+      this.listLocataire.modifierLocataire(this.locataire.id)
     }
 
   ngOnInit(): void {

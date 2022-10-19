@@ -18,16 +18,13 @@ export class LocataireListComponent implements OnInit {
    * booléens pour savoir si on doit afficher ou non le formulaire
    */
     newLocataire!: boolean;
-    modifierLocataire!: boolean;
+    modifLocataire!: boolean;
   
     constructor(private locataireService: LocataireService) { }
   
     ngOnInit(): void {
       this.newLocataire = false;
-      this.modifierLocataire = false;
-      /**
-       * récupère la liste de tous les utilisateurs
-       */
+      this.modifLocataire = false;
       this.locataires = this.locataireService.getAllLocataires();
     }
   
@@ -36,7 +33,7 @@ export class LocataireListComponent implements OnInit {
      */
     creerLocataire() {
       this.newLocataire = true;
-      this.modifierLocataire = false;
+      this.modifLocataire = false;
     }
   
     /**
@@ -50,17 +47,16 @@ export class LocataireListComponent implements OnInit {
      * Récupère un client par son ID en vu de le modifier
      * @param userId id du client
      */
-    modifyUser(locataireId: number){
-      this.modifierLocataire = true;
+    modifierLocataire(locataireId: number){
+      this.modifLocataire = true;
       this.newLocataire = false;
       this.locataire = this.locataireService.getLocataireById(locataireId);
     }
     /**
      * masque le formulaire  de mise à jour quand on le valide ou quand on annule la saisie
      */
-    cancelUpdateClient() {
-      this.modifierLocataire = false;
-  
+    annulerModificationLocataire() {
+      this.modifLocataire = false;  
     }
  
 

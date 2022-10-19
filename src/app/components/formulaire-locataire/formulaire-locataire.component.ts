@@ -19,9 +19,10 @@ export class FormulaireLocataireComponent implements OnInit {
    * Création du formulaire pour les clients
    */
   formLocataire : FormGroup = this.formBuilder.group({
-    name: '',
-    firstName: '',
-    email: ''
+    prenom: '',
+    nom: '',
+    mail: '',
+    tel:''
   })
 
   constructor(private locataireService : LocataireService,
@@ -35,7 +36,8 @@ export class FormulaireLocataireComponent implements OnInit {
     this.formLocataire.patchValue({
       prenom: this.locataire.prenom,
       nom: this.locataire.nom,
-      mail: this.locataire.mail
+      mail: this.locataire.mail,
+      tel: this.locataire.tel
     })
 
     this.displayTitle();
@@ -58,14 +60,14 @@ export class FormulaireLocataireComponent implements OnInit {
    */
   annuler() {
     this.locataireList.cancelNewClient();
-    this.locataireList.cancelUpdateClient();
+    this.locataireList.annulerModificationLocataire;
   }
 
   /**
    * change le titre du formulaire en fonction du type de formulaire demandé
    */
   displayTitle(){
-    if (this.locataireList.modifierLocataire){
+    if (this.locataireList.modifLocataire){
       this.titreFormulaire = "Modifier locataire"
     }else {
       this.titreFormulaire = "Ajouter locataire"
