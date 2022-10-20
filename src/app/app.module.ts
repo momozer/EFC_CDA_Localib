@@ -13,9 +13,9 @@ import { FormulaireLocataireComponent } from './components/formulaire-locataire/
 import { VehiculeComponent } from './pages/vehiculePage/vehicule/vehicule.component';
 import { VehiculeListComponent } from './pages/vehiculePage/vehicule-list/vehicule-list.component';
 import { FormulaireVehiculeComponent } from './components/formulaire-vehicule/formulaire-vehicule.component';
-import { SingleVehiculeComponent } from './pages/vehiculePage/single-vehicule/single-vehicule.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
+import { LocationComponent } from './location/location.component';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { registerLocaleData } from '@angular/common';
     VehiculeComponent,
     VehiculeListComponent,
     FormulaireVehiculeComponent,
-    SingleVehiculeComponent,
+    LocationComponent,
   
   ],
   imports: [

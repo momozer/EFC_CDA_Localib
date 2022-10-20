@@ -8,10 +8,11 @@ modele!: string;
 prix!: number;
 statut!: string;
 type!: string;
+photo!:string;
 
 
 /* Un constructeur. */
-constructor(id: number, etat: string, immatriculation: string, marque: string, modele: string, prix: number, statut: string, type: string) {
+constructor(id: number, etat: string, immatriculation: string, marque: string, modele: string, prix: number, statut: string, type: string, photo : string) {
     this.id = id;
     this.etat = etat;
     this.immatriculation = immatriculation;
@@ -19,6 +20,7 @@ constructor(id: number, etat: string, immatriculation: string, marque: string, m
     this.modele = modele;
     this.statut = statut;
     this.type = type;
+    this.photo = photo;
 };
 
 //Getter et setter:

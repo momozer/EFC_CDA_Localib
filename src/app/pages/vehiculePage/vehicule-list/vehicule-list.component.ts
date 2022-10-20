@@ -41,7 +41,7 @@ export class VehiculeListComponent implements OnInit {
    * Récupère un véhicule par son ID en vu de le modifier
    * @param vehiculeId id du vzehicule
    */
-  modifierVehicle(vehiculeId : number){
+  modifierVehicule(vehiculeId : number){
     this.modifVehicule = true;
     this.newVehicule = false;
     this.vehicule = this.vehiculeService.getVehiculeById(vehiculeId)

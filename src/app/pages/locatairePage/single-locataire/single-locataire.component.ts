@@ -34,6 +34,7 @@ export class SingleLocataireComponent implements OnInit {
     this.locataireService.supprimer(id);
   }
   onModifier(id : number){
+    this.locataireService.modifier(this.locataire,id);
 
   }
 

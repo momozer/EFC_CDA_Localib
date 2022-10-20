@@ -18,18 +18,20 @@ export class VehiculeComponent implements OnInit {
  * Il navigue vers la page de détail du véhicule actuel
  */
 
-    onDetail(){
-      this.router.navigateByUrl(`vehicules/${this.vehicule.id}`);
-    }
+ 
 
     onSupprimer(){
       this.vehiculeService.supprimer(this.vehicule.id);
+    }
+    louer(){
+      this.router.navigateByUrl(`location/`)
+
     }
 
   ngOnInit(): void {
   }
   modifierVehicule(){
-    this.vehiculeList.modifierVehicle(this.vehicule.id)
+    this.vehiculeList.modifierVehicule(this.vehicule.id)
   }
 
 }

@@ -1,4 +1,4 @@
-.vehicule-card {
+.card {
     box-sizing: border-box;
     width: 50%;
     margin: 20px auto;
@@ -17,6 +17,17 @@
     }
 
     .suppr{
-      background-color: rgb(184, 53, 53);
+      background-color: rgba(184, 53, 53, 0.575);
     }
+
+    .louer{
+      background-color: #FFD700;
+    }
+
+    .modif{
+
+      background-color: rgba(53, 95, 184, 0.493);
+    }
+
+    
   }

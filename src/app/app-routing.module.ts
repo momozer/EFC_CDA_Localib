@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SingleLocataireComponent } from './pages/locatairePage/single-locataire/single-locataire.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { VehiculeListComponent } from './pages/vehiculePage/vehicule-list/vehicule-list.component';
-import { SingleVehiculeComponent } from './pages/vehiculePage/single-vehicule/single-vehicule.component';
+import { LocationComponent } from './location/location.component';
 
 /* Définition des routes de l'application. */
 const routes: Routes = [
@@ -12,7 +12,9 @@ const routes: Routes = [
   {path:'locataires' , component: LocataireListComponent} ,
   {path:'locataires/:id' , component: SingleLocataireComponent} ,
   {path:'vehicules' , component: VehiculeListComponent},
-  {path: 'vehicules/:immatriculation', component: SingleVehiculeComponent},
+  {path:'location', component : LocationComponent}
+
+
 ];
 
 @NgModule({

@@ -14,9 +14,9 @@ vehiculemodif !: Vehicule;
   */
   vehicules: Vehicule[] = [
     
-    new Vehicule (1,"A", "AF541DE","Citroen", "C4",40, "disponible","voiture"),
-    new Vehicule (2, "B", "AF200ll", "Yamaha", "125", 80, "non disponible", "moto"),
-    new Vehicule (3,"C", "AF541DE","Peugeot", "205",25, "disponible","voiture"),
+    new Vehicule (1,"A", "AF541DE","Citroen", "C4",40, "disponible","voiture", "https://www.bing.com/th?id=OAID.b049f176d985c12769970001da666efd&w=180&h=120&c=2&rs=1&qlt=80&o=6&cdv=1&pid=16.1"),
+    new Vehicule (2, "B", "AF200ll", "Yamaha", "125", 80, "non disponible", "moto", "https://www.bing.com/th?id=OAID.4b3de181cfd1146b9a92c22967f8f278&w=180&h=120&c=2&rs=1&qlt=80&o=6&cdv=1&pid=16.1"),
+    new Vehicule (3,"C", "AF541DE","Peugeot", "205",25, "disponible","voiture", "https://th.bing.com/th/id/OIP.QQiXDBdDbbuI5eiDjic3PwHaEK?w=305&h=180&c=7&r=0&o=5&pid=1.7"),
     
   ];
 
