@@ -1,0 +1,14 @@
+<div class="container">
+    <ng-container *ngFor="let vehicule of vehicules">
+        <div class="card" style="width: 18rem;">
+            <img src="../../../assets/images/voiture.jpg" class="card-img-top" alt="voiture">
+            <div class="card-body">
+              <h5 class="card-title">{{vehicule.marque}} - {{vehicule.modele}}</h5>
+              <p class="card-text">{{vehicule.type}}</p>
+              <p *ngFor="let locataire of locataires">{{locataire.nom}}, {{locataire.prenom}}</p>
+              <a *ngIf="vehicule.statut=='0'" class="btn btn-success" (click)="openVehicule(vehicule)">Disponible</a>
+              <a *ngIf="vehicule.statut=='1'" class="btn btn-danger">Indisponible</a>
+            </div>
+          </div>
+    </ng-container>    
+</div>

@@ -15,6 +15,7 @@ photo!:string;
 constructor(id: number, etat: string, immatriculation: string, marque: string, modele: string, prix: number, statut: string, type: string, photo : string) {
     this.id = id;
     this.etat = etat;
+    this.prix   = prix;
     this.immatriculation = immatriculation;
     this.marque = marque;
     this.modele = modele;
@@ -31,6 +32,12 @@ setId(id: number){
     this.id = id;
 }
 
+getPrix(){
+    return this.prix;
+}
+setPrix(prix:number){
+    this.prix = prix;  
+}
 
 getImmatriculation(){
     return this.immatriculation;
@@ -73,5 +80,6 @@ getType(){
 setType(type: string){
     this.type = type;
 }
+
 
 }

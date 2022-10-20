@@ -16,6 +16,8 @@ import { FormulaireVehiculeComponent } from './components/formulaire-vehicule/fo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import { LocationComponent } from './location/location.component';
+import { FormulaireLocationComponent } from './components/formulaire-location/formulaire-location.component';
+import { LocationListComponent } from './location-list/location-list.component';
 
 
 @NgModule({
@@ -31,12 +33,15 @@ import { LocationComponent } from './location/location.component';
     VehiculeListComponent,
     FormulaireVehiculeComponent,
     LocationComponent,
+    FormulaireLocationComponent,
+    LocationListComponent,
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'fr-FR'}
