@@ -13,15 +13,17 @@ export class LocationService {
   locationmodif !: Location;
   vehicule !: Vehicule;
   locataire!: Locataire;
-
+  
+  constructor(private locataireService : LocataireService,
+    private vehiculeService : VehiculeService) { }
   /**
    * tableau de location.
    */
   locations : Location[] = [
-    
-      new Location ( 1, "03/04/2022", "17/04/2022",1500 , this.locataire, this.vehicule),
-      new Location ( 2, "01/09/2022", "15/09/2022",1500, this.locataire, this.vehicule),    
-  ];
+    new Location(1,new Date(), new Date(), this.locataireService.getLocataireById(1), this.vehiculeService.getVehiculeById(2) ),
+    new Location(2, new Date(), new Date(), this.locataireService.getLocataireById(2), this.vehiculeService.getVehiculeById(3) ),
+    new Location(3, new Date(), new Date(), this.locataireService.getLocataireById(3), this.vehiculeService.getVehiculeById(5) ),
+    ];
 
   getAllLocations(): Location[] {
     return this.locations;
@@ -46,9 +48,11 @@ export class LocationService {
    * Il prend un objet location comme argument et l'ajoute au tableau locations
    * @param {Location} location - Location est le paramètre que nous passons dans la fonction.
    */
-  addLocation(location: Location){
-    location.id = this.locations.length + 1;
-    this.locations.push(location);
+  addLocation(locataire : Locataire, vehicule:Vehicule, dateDebut:Date,dateFin:Date){
+    let id = this.locations.length + 1;
+    let location = new Location(id, dateDebut, dateFin, locataire, vehicule);
+    this.locations.push(location)
+   
   }
   
 
@@ -60,24 +64,21 @@ export class LocationService {
     this.locations.splice(locationId -1 ,1);
   }
 
-  modifier(locationModifier: Location, locationId: number){
-    this.locationmodif = (this.getLocationById(locationId));
-    this.locationmodif.setDateDebut(locationModifier.dateDebut);
-    this.locationmodif.setDateFin((locationModifier.dateFin));
-    this.locationmodif.setPrixTotal(locationModifier.prixTotal);
-    this.locationmodif.setLocataire(locationModifier.locataire);
-    this.locationmodif.setVehicule(locationModifier.vehicule);
+  modifier(locataire: Locataire, vehicule: Vehicule, dateDebut: Date, dateFin: Date, locationId: number){
+    this.locationmodif = (this.getLocationById(Number(locationId)));
+    this.locationmodif.setDateDebut(dateDebut);
+    this.locationmodif.setDateFin((dateFin));
+    this.locationmodif.setLocataire(locataire);
+    this.locationmodif.setVehicule(vehicule);
   }
-
-  constructor(private servicelocataire : LocataireService,
-    private serviceVehicule : VehiculeService) { }
+ 
 
   getAllLocatairesContrat(){
-    return this.servicelocataire.getAllLocataires;
+    return this.locataireService.getAllLocataires;
     
   }
   getAllVehciulesContrat(){
-    return this.serviceVehicule.getAllVehicules();
+    return this.vehiculeService.getAllVehicules();
     
   }
 }

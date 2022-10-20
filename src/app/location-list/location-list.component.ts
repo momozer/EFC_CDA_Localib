@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Route } from '@angular/router';
 import { Location } from 'src/app/model/location.model';
+import { Locataire } from '../model/locataire.model';
+import { Vehicule } from '../model/vehicule.model';
+import { LocataireService } from '../services/locataire.service';
 import { LocationService } from '../services/location.service';
+import { VehiculeService } from '../services/vehicule.service';
 
 @Component({
   selector: 'app-location-list',
@@ -9,19 +14,26 @@ import { LocationService } from '../services/location.service';
 })
 export class LocationListComponent implements OnInit {
 
+  locataires!: Locataire[];
+  vehicules!: Vehicule[];
   locations !: Location[];
   location !: Location;
-
   newLocation !: boolean;
   modifLocation!: boolean;
 
-  constructor(private locationService: LocationService) { }
+  constructor(private locationService: LocationService,
+              private locataireService : LocataireService,
+              private vehiculeService : VehiculeService,
+              ) { }
 
-  ngOnInit(): void {
-    this.newLocation = false;
-    this.modifLocation = false;
-    this.locations = this.locationService.getAllLocations();
-  }
+              ngOnInit(): void {
+                this.newLocation = false;
+                this.modifLocation = false;
+                this.locations = this.locationService.getAllLocations();
+                this.locataires = this.locataireService.getAllLocataires();
+                this.vehicules = this.vehiculeService.getAllVehicules();
+              
+              }
 
   /**
    * affiche le formulaire quand on appuie sur le bouton nouvel utilisateur

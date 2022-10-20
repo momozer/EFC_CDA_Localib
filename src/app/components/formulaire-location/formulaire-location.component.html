@@ -33,3 +33,38 @@
     </form>
   </div>
 </div>
+
+<div class="formContainer">
+  <div class="form">
+    <h4>{{titreFormulaire}}</h4>
+    <form (ngSubmit)="onSubmit()" [formGroup]="formLocation">
+      <div>
+        <label>Client</label>
+        <select formControlName="user">
+          <option value="">Choisissez un client</option>
+          <option *ngFor="let locataire of locataires">{{locataire.getId()}} {{locataire.getNom()}} {{locataire.getprenom()}} {{locataire.getMail()}}</option>
+        </select>
+      </div>
+      <div>
+        <label>Véhicule</label>
+        <select formControlName="vehicle">
+          <option value="">Choisissez un véhicule</option>
+          <option *ngFor="let vehicule of vehicules">{{vehicule.getId()}} {{vehicule.getMarque()}} {{vehicule.getModele()}}</option>
+        </select>
+      </div>
+      <div>
+        <label>Date de début de location</label>
+        <input formControlName="dateDebut" type="datetime-local">
+      </div>
+      <div>
+        <label>Date de fin de location</label>
+        <input formControlName="dateFin" type="datetime-local">
+      </div>
+
+      <div class="buttonContainer">
+        <button class="deleteButton" (click)="annuler()">Annuler</button>
+        <button>Valider</button>
+      </div>
+    </form>
+  </div>
+</div>

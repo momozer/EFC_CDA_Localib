@@ -3,9 +3,8 @@ import { Vehicule } from "./vehicule.model";
 
 export class Location {
   id !: number;
-  dateDebut !: string;
-  dateFin !: string;
-  prixTotal !: number;
+  dateDebut !: Date;
+  dateFin !: Date;
   locataire !: Locataire;
   vehicule !: Vehicule;
 
@@ -18,11 +17,10 @@ export class Location {
    * @param {Locataire} locataire - Locataire
    * @param {Vehicule} vehicule - Véhicules
    */
-  constructor(id: number, dateDebut: string, dateFin: string, prixTotal: number, locataire: Locataire, vehicule: Vehicule) {
+  constructor(id: number, dateDebut:Date, dateFin: Date, locataire: Locataire, vehicule: Vehicule) {
     this.id = id;
     this.dateDebut = dateDebut;
     this.dateFin = dateFin;
-    this.prixTotal = prixTotal;
     this.locataire = locataire;
     this.vehicule = vehicule;
   }
@@ -40,7 +38,7 @@ export class Location {
     return this.dateDebut;
   }
 
-  setDateDebut(dateDebut: string) {
+  setDateDebut(dateDebut: Date) {
     this.dateDebut = dateDebut;
   }
 
@@ -48,17 +46,10 @@ export class Location {
     return this.dateFin;
   }
 
-  setDateFin(dateFin: string) {
+  setDateFin(dateFin: Date) {
     this.dateFin = dateFin;
   }
 
-  getPrixTotal() {
-    return this.prixTotal;
-  }
-
-  setPrixTotal(prixTotal: number) {
-    this.prixTotal = prixTotal;
-  }
   getLocataire() {
     return this.locataire;
   }

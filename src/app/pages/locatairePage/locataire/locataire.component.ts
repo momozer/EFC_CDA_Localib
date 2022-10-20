@@ -28,7 +28,7 @@ export class LocataireComponent implements OnInit {
     }
 
     onModifier(){
-      this.listLocataire.modifierLocataire(this.locataire.id)
+      this.listLocataire.modifierLocataire
     }
 
   ngOnInit(): void {
