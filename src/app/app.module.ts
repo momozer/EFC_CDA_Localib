@@ -18,6 +18,7 @@ import { registerLocaleData } from '@angular/common';
 import { LocationComponent } from './pages/locationPage/location/location.component';
 import { FormulaireLocationComponent } from './components/formulaire-location/formulaire-location.component';
 import { LocationListComponent } from './pages/locationPage/location-list/location-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -36,6 +37,7 @@ import { LocationListComponent } from './pages/locationPage/location-list/locati
     LocationComponent,
     FormulaireLocationComponent,
     LocationListComponent,
+    FooterComponent,
   
   
   ],
