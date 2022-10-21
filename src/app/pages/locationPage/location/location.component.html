@@ -1,15 +1,15 @@
 
-<div class="container">
+<div class="location-card">
   <div >
     <h3>{{location.id}}</h3>
   </div>
-  <div class="rentalUserInfo">
+  <div>
     <h3>Id: {{location.locataire.id}}</h3>
     <h3>Nom: {{location.locataire.nom}}</h3>
     <h3>Prénom: {{location.locataire.prenom}}</h3>
     <h5>Email: {{location.locataire.mail}}</h5>
   </div>
-  <div class="rentalCarContainer">
+  <div>
     <img class="photo" [src] = "location.vehicule.photo" [alt]="location.vehicule.modele">
   </div>
   <div class="rentalCarInfo">

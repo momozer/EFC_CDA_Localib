@@ -4,8 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SingleLocataireComponent } from './pages/locatairePage/single-locataire/single-locataire.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { VehiculeListComponent } from './pages/vehiculePage/vehicule-list/vehicule-list.component';
-import { LocationComponent } from './pages/locationPage/location/location.component';
-import { LocationListComponent } from './location-list/location-list.component';
+import { LocationListComponent } from './pages/locationPage/location-list/location-list.component';
 
 /* Définition des routes de l'application. */
 const routes: Routes = [

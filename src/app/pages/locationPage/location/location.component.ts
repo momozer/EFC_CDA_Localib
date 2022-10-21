@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Vehicule } from '../../../model/vehicule.model';
 import { Location } from '../../../model/location.model';
 import { Router } from '@angular/router';
-import { LocationListComponent } from '../../../location-list/location-list.component';
+import { LocationListComponent } from '../location-list/location-list.component';
 
 @Component({
   selector: 'app-location',

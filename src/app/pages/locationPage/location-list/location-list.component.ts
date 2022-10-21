@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/router';
 import { Location } from 'src/app/model/location.model';
-import { Locataire } from '../model/locataire.model';
-import { Vehicule } from '../model/vehicule.model';
-import { LocataireService } from '../services/locataire.service';
-import { LocationService } from '../services/location.service';
-import { VehiculeService } from '../services/vehicule.service';
+import { Locataire } from '../../../model/locataire.model';
+import { Vehicule } from '../../../model/vehicule.model';
+import { LocataireService } from '../../../services/locataire.service';
+import { LocationService } from '../../../services/location.service';
+import { VehiculeService } from '../../../services/vehicule.service';
 
 @Component({
   selector: 'app-location-list',

@@ -1,5 +1,5 @@
 import { VehiculeService } from 'src/app/services/vehicule.service';
-import { LocationListComponent } from './../../location-list/location-list.component';
+import { LocationListComponent } from '../../pages/locationPage/location-list/location-list.component';
 import { LocationService } from './../../services/location.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';

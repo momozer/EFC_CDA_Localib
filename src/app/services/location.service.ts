@@ -20,9 +20,9 @@ export class LocationService {
    * tableau de location.
    */
   locations : Location[] = [
-    new Location(1,new Date(), new Date(), this.locataireService.getLocataireById(1), this.vehiculeService.getVehiculeById(2) ),
-    new Location(2, new Date(), new Date(), this.locataireService.getLocataireById(2), this.vehiculeService.getVehiculeById(3) ),
-    new Location(3, new Date(), new Date(), this.locataireService.getLocataireById(3), this.vehiculeService.getVehiculeById(5) ),
+    new Location(1,new Date(), new Date(), this.locataireService.getLocataireById(1), this.vehiculeService.getVehiculeById(1) ),
+    new Location(2, new Date(), new Date(), this.locataireService.getLocataireById(2), this.vehiculeService.getVehiculeById(2) ),
+    new Location(3, new Date(), new Date(), this.locataireService.getLocataireById(3), this.vehiculeService.getVehiculeById(3) ),
     ];
 
   getAllLocations(): Location[] {
