@@ -1,10 +1,10 @@
-import { LocationService } from '../../../services/location.service';
 import { Locataire } from 'src/app/model/locataire.model';
 import { Component, Input, OnInit } from '@angular/core';
-import { Vehicule } from '../../../model/vehicule.model';
-import { Location } from '../../../model/location.model';
 import { Router } from '@angular/router';
-import { LocationListComponent } from '../location-list/location-list.component';
+import { LocationService } from 'src/app/services/location.service';
+import { LocationListComponent } from 'src/app/pages/locationPage/location-list/location-list.component';
+import { Vehicule } from 'src/app/model/vehicule.model';
+import { Location } from 'src/app/model/location.model';
 
 @Component({
   selector: 'app-location',

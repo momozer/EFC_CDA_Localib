@@ -1,7 +1,7 @@
-import { LocataireListComponent } from './../locataire-list/locataire-list.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Locataire } from 'src/app/model/locataire.model';
+import { LocataireListComponent } from 'src/app/pages/locatairePage/locataire-list/locataire-list.component';
 import { LocataireService } from 'src/app/services/locataire.service';
 
 @Component({

@@ -47,7 +47,7 @@
       </div>
       <div>
         <label>Véhicule</label>
-        <select formControlName="vehicle">
+        <select formControlName="vehicule">
           <option value="">Choisissez un véhicule</option>
           <option *ngFor="let vehicule of vehicules">{{vehicule.getId()}} {{vehicule.getMarque()}} {{vehicule.getModele()}}</option>
         </select>

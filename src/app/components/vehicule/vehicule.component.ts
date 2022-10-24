@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Vehicule } from 'src/app/model/vehicule.model';
+import { VehiculeListComponent } from 'src/app/pages/vehiculePage/vehicule-list/vehicule-list.component';
 import { VehiculeService } from 'src/app/services/vehicule.service';
-import { VehiculeListComponent } from '../vehicule-list/vehicule-list.component';
+
 
 @Component({
   selector: 'app-vehicule',
